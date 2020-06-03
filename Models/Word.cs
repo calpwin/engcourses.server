@@ -39,5 +39,8 @@ namespace EngCourses.Models
 
         [JsonProperty("engAudioExtend")]
         public string EngAudioExtend { get; set; }
+        
+        [JsonProperty("exception", NullValueHandling = NullValueHandling.Ignore )]
+        public string Exception { get; set; }
     }
 }

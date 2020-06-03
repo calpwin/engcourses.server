@@ -11,12 +11,28 @@
 
     <ItemGroup>
       <Content Remove="Resources\words.json" />
+      <EmbeddedResource Remove="EngCoursesUploader\**" />
+      <Content Remove="EngCoursesUploader\**" />
       <EmbeddedResource Include="Resources\words.json">
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </EmbeddedResource>
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="EngCoursesUploader\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="EngCoursesUploader\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="EngCoursesUploader\obj\EngCoursesUploader.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="EngCoursesUploader\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="EngCoursesUploader\obj\project.packagespec.json" />
+    </ItemGroup>	
 
 
 </Project>
